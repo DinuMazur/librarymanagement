@@ -1,9 +1,5 @@
-MAZUR DINU 323 CB
-
-//tema a fost incarcata inainte de schimbarea cerintelor legate de timeout
-
 //Descriere Generala
-	In aceasta tema am implementat un client web care interactioneaza cu un
+	In aceast proiect am implementat un client web care interactioneaza cu un
 server. Interactiunea consta in obtinerea si postarea unor descrieri de carti
 dintr-o/intr-o baza de date structura careaia nu ne este descrisa dar se
 stie mediul prin care putem comunica. Mediul asta de cominicare este
