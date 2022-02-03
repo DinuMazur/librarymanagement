@@ -1,0 +1,46 @@
+MAZUR DINU 323 CB
+
+//tema a fost incarcata inainte de schimbarea cerintelor legate de timeout
+
+//Descriere Generala
+	In aceasta tema am implementat un client web care interactioneaza cu un
+server. Interactiunea consta in obtinerea si postarea unor descrieri de carti
+dintr-o/intr-o baza de date structura careaia nu ne este descrisa dar se
+stie mediul prin care putem comunica. Mediul asta de cominicare este
+protocolul HTTP si API-ul bazei de date.
+
+	Clientul este capabil sa creeze cont-uri, sa se logeze, sa obtina access
+la libraria de carti, sa afiseze toate cartile din baza de date si sa ceara
+afisarea unei singure carti.
+	Serverul in spate citeste cererile clientului, efectueaza operatiile
+necesare si transmite un raspuns clientului.
+	Rolul acestui program este de a creea un mediu prin care utilizatorul poate
+interactiona cu serverul intr-un mod cat mai placut. Pentru acesta programul 
+include elemente de interfatare si comenzi specifice pentru realizarea
+operatiilor (o interfata).
+	Am folosit bilblioteca Parson deoarece a fost recomandata in enuntul temei
+si ca e simplu de utuizat.
+	
+//Comenzi utlizator
+	register		: deschide un prompt care permite utilizatorului sa creeze
+						un account nou.
+	login			: deschide un prompt pentru autentificare
+	enter_library	: trimite o cerere pentru a accesa libraria
+	get_books		: afiseaza toate cartile curente in baza de date
+	get_book		: afisarea descrierii unei singure carti pe baza id-ului
+	delete_book		: stergerea descrierii unei singure carti din baza de date
+	logout			: delogheaza utilizatorul curent
+	exit			: inchide programul
+
+//Implementare
+
+	Prima etapa consta in citirea comenzilor de la lastatura si apelarea
+functiilor corespunzatoare in dependenta de starea in care se afla
+utilizatorul. De exemplu utilizatorul nu are acces la librarie daca nu este
+logat (este anuntat de acest fapt).
+	A doua etapa consta in formatarea cererilor HTTP si transmiterea lor
+catre server.
+	Ultima etapa consta in receptionarea datelor de la server, parsarea
+raspunsurilor si afisarea rezultatelor intr-un mod cat mai user-friendly.
+
+Detali in fisierul sursa
